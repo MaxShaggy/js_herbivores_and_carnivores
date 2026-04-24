@@ -8,11 +8,7 @@ class Animal {
   }
 
   static removeFromAlive(animal) {
-    const index = Animal.alive.indexOf(animal);
-
-    if (index !== -1) {
-      Animal.alive.splice(index, 1);
-    }
+    Animal.alive = Animal.alive.filter(a => a !== animal);
   }
 }
 
